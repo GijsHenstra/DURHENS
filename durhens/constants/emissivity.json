@@ -1,0 +1,10 @@
+{
+    "walls": 0.90,
+    "walls": 0.90,
+    "roofs": 0.93,
+    "roads": 0.93,
+    "grass": 0.95,
+    "concrete": 0.85,
+    "water": 0.95,
+    "trees": 0.98
+}

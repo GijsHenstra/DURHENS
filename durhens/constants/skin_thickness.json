@@ -1,0 +1,9 @@
+{
+    "walls": 0.02,
+    "roofs": 0.02,
+    "roads": 0.02,
+    "grass": 0.02,
+    "concrete": 0.02,
+    "water": 1,
+    "trees": 0.02
+}

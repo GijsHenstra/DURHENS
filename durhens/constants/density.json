@@ -1,0 +1,9 @@
+{
+    "walls": 2300,
+    "roofs": 2400,
+    "roads": 2400,
+    "grass": 2050,
+    "concrete": 2200,
+    "water": 1000,
+    "trees": 1000
+}

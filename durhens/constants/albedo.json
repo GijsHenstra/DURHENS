@@ -1,0 +1,19 @@
+{
+    "walls_old": 0.3, 
+    "walls": 0.2,
+    "_walls": "Red brick: 0.125, lijkt me fout", 
+    "roofs_old": 0.05,
+    "roofs": 0.18, 
+    "_roofs": "Made of tar paper",
+    "roads_old": 0.16,
+    "roads": 0.18,
+    "_roads": "Asphalt roads: 0.1",
+    "grass": 0.20,
+    "_grass": "Average value for moist soil with grass",
+    "concrete": 0.3,
+    "_concrete": "Concrete slabs",
+    "water": 0.08,
+    "_water": "Fresh water",
+    "trees": 0.165,
+    "_trees": "Average value for deciduous trees"
+}

@@ -1,0 +1,3 @@
+time_name,24-H (00:00-24:00),24-H (00:00-24:00),24-H (00:00-24:00),24-H (00:00-24:00),24-H (00:00-24:00),Evening (18:00-20:00),Evening (18:00-20:00),Evening (18:00-20:00),Evening (18:00-20:00),Evening (18:00-20:00),Before sunrise (04:00),Before sunrise (04:00),Before sunrise (04:00),Before sunrise (04:00),Before sunrise (04:00),Around Noon (12:00 - 16:00),Around Noon (12:00 - 16:00),Around Noon (12:00 - 16:00),Around Noon (12:00 - 16:00),Around Noon (12:00 - 16:00)
+variable,Albedo,T_mean,T_min,T_max,T_mr_mean,Albedo,T_mean,T_min,T_max,T_mr_mean,Albedo,T_mean,T_min,T_max,T_mr_mean,Albedo,T_mean,T_min,T_max,T_mr_mean
+folder,,,,,,,,,,,,,,,,,,,,

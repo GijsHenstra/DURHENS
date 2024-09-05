@@ -1,0 +1,121 @@
+# ---- Environment and resolution settings
+
+ADDRESS: "custom" # address e.g. "Lorentzweg 1, Delft" or "52.00085147035884, 4.374406898949407"
+ADDRESS_STR: "Model 1: North-South Urban Canyon, 20m apart"
+
+GRIDSIZE: 150 # meters 
+RES: 1.0 # resolution of gridcells, must be a float number
+AHN_VERSION: 4 # version of the Algemene Hoogtebestand Nederland
+BLUR_ELEVATION: 1 # number of pixels to use for a Gaussian blur
+ROTATION: True # True: automatically calculate / float: use given rotation
+TREES: False # if False, set height to zero at location of trees
+HW: 1.0 # height / width ratio. Unused for real-world simulations
+CHECK_TIMESTEP: True # to check if the timestep is small enough to about instabilities in the diffusion model
+SAVE_STEADY_STATE: True
+SKIP_STEPS: True
+
+# ---- Time
+AVERAGE_YEARS: False
+START_DATES: [[2019, 7, 22]]
+DAYS: 2
+T_STEP: 300 # seconds
+
+# ---- Weather settings
+T_AIR: 'tud-oost'
+
+EMISSIVITY_SKY: 'calculate'
+REL_HUM: 'bsrn'
+WIND_SPEED: 'tud-oost'
+CLOUD_COVER: 'knmi'
+
+G_HOR: 'bsrn'
+DIR_HOR: 'bsrn'
+DIR_PERP: 'bsrn'
+DIFF_HOR: 'bsrn'
+LW_SKY: 'bsrn'
+
+# ---- Physics settings
+FIXED_TEMP: False
+CALC_GHI_NO_ATM: False
+RADIATIONS: {} # manually specifiy radiations
+    # Dir_perp: 800
+    # Diff_hor: 0
+SOLAR_ANGLES: 
+    location: True
+    default_latitude_longitude: [52, 4.375]
+    timezone: 'Europe/Amsterdam'
+    filename: 'solar_angles_custom.txt' # relative path in the working directory
+RECALC_SUNLIT_ELS: True
+WINDY_FACES: [1, 1, 0, 1, 1, 1]
+T_BUILDING_INTERIOR: 20 # celcius
+UNIFORM_WINDSPEED: True
+SHADOW_METHOD: 'rt' # method for finding shadows, default is 'rt' for raytracing downwards. 'rt_up' can be used for upwards raytracing.
+
+ACTIVE_PHYSICS: 
+    interaction: True
+    sw_out_refl: True
+    sw_in_diff: True
+    sw_in_dir: True
+    lw_in_sky: True
+    lw_out_emm: True
+    lw_out_refl: True
+    convection: True
+    conduction_surface: False
+    conduction_inwards: False
+    anthropogenic: False
+ERROR_REFLECTIONS: 0.001
+    
+T_INIT: 
+    walls: 293
+    roofs: 293
+    roads: 293
+    grass: 293
+    concrete: 293
+    water: 293
+    trees: 293
+
+
+CALC_HW_MAP: True
+PLOT_HW_MAP: [] # can be 'bar' or 'bar_top'
+FORCE_RECALC_ENVIR: False # to redownload and process environment data
+FORCE_RECALC_DATA: False # recalculate simulation data
+FORCE_RECALC_SUN: False
+
+
+# ---- Computational optimisation parameters
+REDUCE_ACCURACY_VF_PERC: 0 # max alteration of the sum of viewfactors, to reduce viewfactor size
+CALC_UTCI: True
+CALC_UHI: False
+MAX_RAY_DIST: 100 # maximum length of rays to be traced, in meters. For solar rays and view factor calculation
+MIN_VF_VALUE: 0.00001
+
+# ---- Sensor settings
+SENSOR_LOCATION: 'street and floating' # 'top canyon' / 'img' / 'ground'
+PLOT_SENSOR_LOCATION: []]
+
+# ---- Environment plot settings
+
+PLOT_TOPOLOGY: [] # can be 'voxels' or 'voxels_side' a.o.
+PLOT_SVF: [] # can be 'voxels'
+
+# ---- Simulation plot settings
+
+SHOW_DASHBOARD: False
+
+PLOT_SHADE: []
+
+PLOT_DATA: ['bar_shaded'] # or 'voxels' or 'bar'
+PLOT_DATA_INPUT: "T"
+PLOT_DATA_COLORBAR_LIMS: [10, 70]
+PLOT_DATA_CMAP: 'coolwarm'
+
+PLOT_SENSOR_DATA: []
+PLOT_SENSOR_DATA_INPUT: ["T"]
+PLOT_SENSOR_COLORBAR_LIMS: [[]]
+PLOT_SENSOR_CMAP: ['coolwarm']
+
+PLOT_DAYS: []
+PLOT_HOURS: []
+PLOT_HOURS: []
+PLOT_MINUTES: [0, 30]
+PLOT_TIME: []
